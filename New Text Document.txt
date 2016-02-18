@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+.header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+
+</style>
+</head>
+<body>
+<div class="header1">
+<h1>FaceBook</h1>
+</div>
+<div class="header1">
+<form>
+UserName<br>
+<input type="text" name="userName"><br>
+Password<br>
+<input type="password" name="pass"><br>
+<input type="submit" value="Login"> 
+</form>
+
+<div id="nav">
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+</div>
+
+<div id="section">
+<form>
+First Name:
+<input type="text" name="FName"><br>
+Last Name:
+<input type="text" name="LName"><br>
+Email Id:
+<input type="email" name="mail"><br>
+<label>Male<input type="radio" name="gender" value="male" checked></label><br> 
+label>Female<input type="radio" name="gender" value="female"></label><br> 
+</form>
+</div>
+
+
+</body>
+</html>
