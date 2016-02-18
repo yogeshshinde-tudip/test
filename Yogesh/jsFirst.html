@@ -1,0 +1,163 @@
+<html>
+<body>
+<div style="background-color:lightblue">
+<p style="color:blue;text-align:center;font-size:30px">Example for onclick event</p>
+<p id="demo">Hi Good Evening</p>
+<style>
+p {color:red;
+   font-familey:"Times new roman";
+   font-size:20px
+}
+</style>
+<button id="btn1" onclick="showmsg()">Try To Get message</button>
+<script>
+function showmsg()
+{
+document.getElementById("demo").innerHTML="Hi good Morning.";
+}
+</script>
+</div>
+
+<br></br>
+
+<div style="background-color:lightblue">
+<p style="color:blue;text-align:center;font-size:30px">Example for Display Message</p>
+<p id="demo1">test</p>
+<style>
+p {color:red;
+   font-familey:"Times new roman";
+   font-size:20px
+}
+</style>
+<button id="btn1" onclick="getAlert()";>To get Windo Alert</button>
+<button id="btnselt" onclick="getDate()">Date</button>
+
+<button id="btnover">Mouse Over</button>
+<button id="btnwrite" onmouseout="getDelete()">Mouse Over</button>
+<script>
+function getAlert()
+{
+window.alert("Hi this is windo Alaert");
+}
+/*
+function getMouseOver()
+{
+document.getElementById("demo1").innerHTML="This is mouse over Event";
+}
+*/
+function getDate()
+{
+document.getElementById("demo1").innerHTML=Date();
+}
+/*function getDelete()
+{
+document.write("All Page Going To Refress.");
+}
+*/
+</script>
+</div>
+<br></br>
+<br></br>
+
+<div style="background-color:lightblue">
+<p style="color:blue;text-align:center;font-size:30px">Application For Calculator</p>
+<div style="text-align:center";>
+Enter Number: <input type="text" id="txtInput"></input>
+<br></br>
+<button name="no" value=1 onclick="getClickedValue(this.value)">1</button>
+<button name="no" value=2 onclick="getClickedValue(this.value)">2</button>
+<button name="no" value=3 onclick="getClickedValue(this.value)">3</button>
+<button name="no" value=4 onclick="getClickedValue(this.value)">4</button>
+<br></br>
+<button name="no" value=5 onclick="getClickedValue(this.value)">5</button>
+<button name="no" value=6 onclick="getClickedValue(this.value)">6</button>
+<button name="no" value=7 onclick="getClickedValue(this.value)">7</button>
+<button name="no" value=8 onclick="getClickedValue(this.value)">8</button>
+<br></br>
+<button name="no" value=9 onclick="getClickedValue(this.value)">9</button>
+<button name="no" value=0 onclick="getClickedValue(this.value)">0</button>
+<br></br>
+<button name="no" value=+ onclick="getClickedValue(this.value)">+</button>
+<button name="no" value=- onclick="getClickedValue(this.value)">-</button>
+<button name="no" value=* onclick="getClickedValue(this.value)">*</button>
+<button name="no" value=/ onclick="getClickedValue(this.value)">/</button>
+<button name="no" value== onclick="getClickedValue(this.value)">=</button>
+<br><br>
+<button name="no" value== onclick="getHex(this.value)">Hex</button>
+<script>
+function getHex(num)
+{
+var hex=document.getElementById("txtInput").value;
+window.alert(hex.toString(8));
+}
+function getClickedValue(num)
+{
+if(num=='=')
+	{
+		getResult(num);
+	}
+else
+	{
+		var txt=document.getElementById("txtInput").value;
+		document.getElementById("txtInput").value=txt + num;
+	}
+}
+function getResult(num)
+{
+var str=document.getElementById("txtInput").value;
+var getPlus=str.indexOf("+");
+var getMinus=str.indexOf("-");
+var getMul=str.indexOf("*");
+var getDiv=str.indexOf("/");
+
+var getLastplus=str.lastIndexOf("+");
+var getLastMinus=str.lastIndexOf("-");
+var getLastMul=str.lastIndexOf("*");
+var getLastDiv=str.lastIndexOf("/");
+
+var lengthStr=str.length;
+//window.alert(getLastplus +":"+((lengthStr)-1));
+if(((getPlus==0)||(getLastplus==((lengthStr)-1)))||((getMinus==0)||(getLastMinus==((lengthStr)-1)))||((getMinus==0)||(getLastMinus==((lengthStr)-1)))||((getDiv==0)||(getLastDiv==((lengthStr)-1))))
+{
+	window.alert("Please Enter Valid Input");
+}
+else
+{
+      	if(getPlus>1)
+		{
+			StrArray=str.split("+");
+			result=(Number(StrArray[0]) + Number(StrArray[1]));
+			window.alert(result);
+		}
+		else if(getMinus>1)
+		{
+			StrArray=str.split("-");
+			result=(Number(StrArray[0]) - Number(StrArray[1]));
+			window.alert(result);
+		}
+		else if(getMul>1)
+		{
+			StrArray=str.split("*");
+			result=(Number(StrArray[0]) * Number(StrArray[1]));
+			window.alert(result);
+		}
+		else if(getDiv>1)
+		{
+			StrArray=str.split("/");
+			result=(Number(StrArray[0]) / Number(StrArray[1]));
+			window.alert(result);
+		}
+		else
+		{
+		 window.alert("Please Enter Valid Data");
+		} 
+}
+}
+
+</script>
+</div>
+
+</div>
+
+</body>
+</html>

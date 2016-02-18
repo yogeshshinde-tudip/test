@@ -1,0 +1,192 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<div style=background-color:skyblue;text-align:right;border-style:solid;position:right>
+<script>
+$(document).ready(
+function()
+{
+$("#show").click(function()
+					{
+					$("p").show();
+					});
+
+$("#btn1").click(function(){
+$("#test").hide(1000);
+$("p:first").hide(1000);
+$("tr:odd").css("background-color","red");
+$("tr:even").css("background-color","cyan");
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+$("p").click(function(){
+$(this).hide();
+});
+});
+</script>
+<script>
+/*
+$(document).ready(function(){
+$("p").mouseenter(function()
+{
+alert("You have Entered on Para...");
+});
+});
+*/
+</script>
+<script>
+/*$(documetnt).ready(function()
+				{
+					$("#show").click(function()
+					{
+					$("p").show();
+					});
+});
+*/
+</script>
+<script>
+$(document).ready(function(){
+    $("#tgl").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#fade").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#slide").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+<script> 
+$(document).ready(function(){
+    $("#ani").click(function(){
+        var div = $("#panel");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    });
+});
+</script> 
+<script>
+$(document).ready(function(){
+    $("#hidemultipal").click(function(){
+        $("#panel").hide("slow", function(){
+            alert("The paragraph is now hidden");
+        });
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#addtext").click(function(){
+        $("p").append(" <b>Appended text</b>.");
+    });
+
+    $("#addlist").click(function(){
+        $("ol").append("<li>Appended item</li>");
+    });
+});
+</script>
+</head>
+<body>
+<table style="border:2px solid black;text-align:center;position:center">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabb</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+<p>Test</p>
+<p class="p1">This is first para</p>
+<p id="test">This is second para</p>
+<button id="btn1">Hide </button>
+<button id="show">Show</button>
+<button id="tgl">Toggle</button>
+<button id="fade">Click To check fade</button>
+<button id="slide">Slide</button>
+<button id="ani">Animation</button>
+<button id="hidemultipal">Hide Pannel</button>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</div>
+<br></br>
+
+<div id="panel" style="width:90%;height:200px;display:none;background-color:skyblue;">
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="addtext">Append text</button>
+<button id="addlist">Append list items</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>Creation of array object in javascript using JSON</title>
+		
+      <script language = "javascript" >
+
+         document.writeln("<h2>JSON array object</h2>");
+
+         var books = { "Pascal" : [ 
+            { "Name"  : "Pascal Made Simple", "price" : 700 },
+            { "Name"  : "Guide to Pascal", "price" : 400 }],  
+				
+            "Scala"  : [
+               { "Name"  : "Scala for the Impatient", "price" : 1000 }, 
+               { "Name"  : "Scala in Depth", "price" : 1300 }]    
+         }    
+
+         var i = 0
+         for(i = 0;i<books.Scala.length;i++)
+		 {
+            document.writeln("<td>");
+            document.writeln("<table border = '1' width = 100 >");
+            document.writeln("<tr><td><b>Name</b></td><td width = 50>" + books.Scala[i].Name+"</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td width = 50>" + books.Scala[i].price+"</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+         }
+
+      </script>
+
+   </head>
+	
+   <body>
+   "<div id="div1">"++ </div>
+   </body>
+	
+</html>

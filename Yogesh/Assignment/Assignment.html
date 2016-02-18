@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#add").click(function(){
+	    $("#updateDiv").hide();
+        $("#adddataDiv").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#update").click(function(){
+	    $("#adddataDiv").hide();
+        $("#updateDiv").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("show").click(function(){
+	displayData();
+	});
+
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("show").click(function(){
+	$("showpanel").slideToggle("slow");
+	});
+
+});
+</script>
+</head>
+<body>
+<div id="parent" style=background-color:skyblue;height:100%;width:100%;text-align:center ><span style=font-size:24>Student Information</span>
+<div id="menu" style=background-color:red;margin:auto;height:93%;width:97%;text-align:center><br>
+<div class="btn-group btn-group-lg">
+<button type="button" id="add" class="btn btn-info">Add</button>
+<button type="button" id="show" class="btn btn-info">Show</button>
+<button type="button" id="update" class="btn btn-info">Update</button>
+<button type="button" id="search" class="btn btn-info">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </button>
+  <a href="#">News <span class="badge">5</span></a><br>
+</div>
+<div id="showpanel" class="panel panel-info">
+  <div class="panel-header">Panel Header</div>
+  <div class="panel-footer">Panel Footer</div>
+</div>
+<div id="adddataDiv" style=background-color:skyblue;display:none;margin:auto;height:88%;width:97%;text-align:center ><span style=font-size:20;text-align:center>Add Student Information</span>
+<br><br>
+Roll No:<input type="text" id="rno" placeholder="Enter Roll No"/>
+First Name:<input type="text" id="fname" placeholder="Enter First Name"/>
+ Last Name:<input type="text" id="lname" placeholder="Enter Last Name"/>
+  Subjects:<input type="text" id="subject" placeholder="Enter Subjects"/>
+  <button id="addData">Add</button>
+</div>
+
+<div id="updateDiv" style=background-color:skyblue;display:none;margin:auto;height:88%;width:97%;text-align:center ><span style=font-size:20;text-align:center>Update Student Information</span>
+<br><br>
+Enter Roll No:<input type="text" id="fname" placeholder="Enter Roll No"><button id="getInfobyNo">Get Student Data</button><br><br>
+ 
+ Roll No:<input type="text" id="rno"/>
+ First Name:<input type="text" id="fname"/>
+ Last Name:<input type="text" id="lname"/>
+  Subjects:<input type="text" id="subject"/>
+  <button id="updateData">Update</button>
+</div>
+</div>
+</div>
+</body>
+</html>

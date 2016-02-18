@@ -1,0 +1,21 @@
+var students=[
+			  {First Name:"Yogesh",
+			   Last Name:"Shinde",
+			   Roll No:"1",
+			   Subjects:"c,c++,java,Data Structure" },
+			   
+			  {First Name:"Atul",
+			   Last Name:"Chavan",
+			   Roll No:"2",
+			   Subjects:"c,c++,java,BI" },
+			   
+			   {First Name:"Shiva",
+			   Last Name:"Bhosle",
+			   Roll No:"3",
+			   Subjects:"c,c++,java,DS" },
+			   
+			   {First Name:"Ravna",
+			   Last Name:"Shrilanka",
+			   Roll No:"4",
+			   Subjects:"c,c++,java,Python" }
+			  ]

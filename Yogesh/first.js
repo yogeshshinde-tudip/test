@@ -1,0 +1,12 @@
+<html>
+<body>
+<p id="demo">Hi Good Evening</p>
+<button type="Button" id="btn1" onclick="showmsg()">Try To Get message<button>
+<script>
+function showmsg()
+{
+document.getElementById("demo").innerHTML="Hi good Morning.";
+}
+</script>
+</body>
+</html>
